@@ -1,0 +1,11 @@
+p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+  font-size: 4rem;
+  padding: 10rem;
+}
