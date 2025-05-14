@@ -1,0 +1,18 @@
+<!-- Dashboard -->
+
+<div class="container">
+  <h2 class="text-primary fw-bold mb-4">SuperAdmin Dashboard</h2>
+
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let card of cards">
+      <div class="dashboard_card shadow-sm">
+        <div class="icon_box mb-3">
+          <i [class]="card.icon"></i>
+        </div>
+        <h5>{{ card.title }}</h5>
+        <p>{{ card.text }}</p>
+        <a [routerLink]="card.link" class="btn btn-primary w-100">Go</a>
+      </div>
+    </div>
+  </div>
+</div>

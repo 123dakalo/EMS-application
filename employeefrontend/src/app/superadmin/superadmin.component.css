@@ -1,11 +1,5 @@
-p{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background-color: dodgerblue;
-  color: white;
-  font-weight: bold;
-  font-size: 4rem;
-  padding: 10rem;
+.dashboard_section{
+  background-color: #f8fafc;
+  min-height: 100vh;
+  margin-top: 70px;
 }

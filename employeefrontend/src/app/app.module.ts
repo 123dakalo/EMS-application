@@ -9,6 +9,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { SuperadminComponent } from './superadmin/superadmin.component';
 import { AdminComponent } from './admin/admin.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { ManageEmployeeComponent } from './superadmin/manage-employee/manage-employee.component';
+import { DashboardComponent } from './superadmin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { EmployeeComponent } from './employee/employee.component';
     LoginComponent,
     SuperadminComponent,
     AdminComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    ManageEmployeeComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
