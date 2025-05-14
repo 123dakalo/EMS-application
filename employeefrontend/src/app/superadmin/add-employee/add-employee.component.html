@@ -1,0 +1,33 @@
+<!-- create-employee.component.html -->
+<div class="custom-form-container mt-4">
+  <h2 class="mb-4 text-primary">Create New Employee</h2>
+
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="bg-dark p-4 rounded text-light">
+    <div class="mb-3">
+      <label for="fullName" class="form-label">Full Name</label>
+      <input type="text" class="form-control" id="fullName" formControlName="fullName" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="emailId" class="form-label">Email</label>
+      <input type="email" class="form-control" id="emailId" formControlName="emailId" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="password" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="role" class="form-label">Role</label>
+      <select class="form-select" id="role" formControlName="role" required>
+        <option value="">Select Role</option>
+        <option value="employee">Employee</option>
+        <option value="admin">Admin</option>
+        <option value="superadmin">Super Admin</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">Create Employee</button>
+  </form>
+</div>

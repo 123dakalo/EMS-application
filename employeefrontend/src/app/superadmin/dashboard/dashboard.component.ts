@@ -22,7 +22,7 @@ export class DashboardComponent {
     },
     {
       title: 'Role Management',
-      text: 'Assign roles to employees: Admin, SuperAdmin, etc.',
+      text: 'Assign roles to employees: Admin, SuperAdmin.',
       icon: 'fas fa-user-shield',
       link: '/roles'
     },

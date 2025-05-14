@@ -1,7 +1,7 @@
 <div class="container mt-4">
   <div class="d-flex justify-content-between align-items-center mb-3">
     <h3 class="text-primary">Manage Employees</h3>
-    <button class="btn btn-success" (click)="openAddForm()">+ Add Employee</button>
+    <button class="btn btn-success" routerLink="/superadmin/add-employee">+ Add Employee</button>
   </div>
 
   <table class="table table-bordered table-hover bg-light text-dark">
@@ -21,8 +21,12 @@
       <td>{{ emp.emailId }}</td>
       <td>{{ emp.role }}</td>
       <td>
-        <button class="btn btn-primary btn-sm me-2" (click)="editEmployee(emp)">Edit</button>
-        <button class="btn btn-danger btn-sm" (click)="deleteEmployee(emp.id)">Delete</button>
+        <button class="btn btn-primary btn-sm me-2" (click)="editEmployee(emp)">
+          Edit <i class="bi bi-pencil-square ms-1"></i>
+        </button>
+        <button class="btn btn-danger btn-sm" (click)="deleteEmployee(emp.id)">
+          Delete <i class="bi bi-trash ms-1"></i>
+        </button>
       </td>
     </tr>
     </tbody>
