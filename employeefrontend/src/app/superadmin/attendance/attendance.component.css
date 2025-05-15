@@ -1,3 +1,8 @@
+.table th, .table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
 .table th {
   background-color: #22D3EE;
   color: #0F172A;

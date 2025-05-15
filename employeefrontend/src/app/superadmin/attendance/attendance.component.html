@@ -1,0 +1,48 @@
+<div class="container mt-4">
+  <h2 class="mb-4 text-primary">Attendance Records</h2>
+
+  <!-- Filters -->
+  <div class="row mb-3">
+    <div class="col-md-4 mb-2">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by Employee Name"
+        [(ngModel)]="searchName"
+      />
+    </div>
+    <div class="col-md-4 mb-2">
+      <input
+        type="date"
+        class="form-control"
+        [(ngModel)]="searchDate"
+      />
+    </div>
+  </div>
+
+  <!-- Attendance Table -->
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover text-light bg-dark">
+      <thead class="table-primary">
+      <tr>
+        <th>Employee</th>
+        <th>Date</th>
+        <th>Clock-In</th>
+        <th>Clock-Out</th>
+        <th>Late?</th>
+        <th>Early Leave?</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let record of filteredAttendance()">
+        <td>{{ record.employee.fullName }}</td>
+        <td>{{ record.date }}</td>
+        <td>{{ record.clockInTime || '-' }}</td>
+        <td>{{ record.clockOutTime || '-' }}</td>
+        <td>{{ record.late ? 'Yes' : 'No' }}</td>
+        <td>{{ record.earlyLeave ? 'Yes' : 'No' }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

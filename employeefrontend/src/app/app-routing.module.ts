@@ -8,13 +8,14 @@ import {ManageEmployeeComponent} from './superadmin/manage-employee/manage-emplo
 import {DashboardComponent} from './superadmin/dashboard/dashboard.component';
 import {AddEmployeeComponent} from './superadmin/add-employee/add-employee.component';
 import {EditEmployeeComponent} from './superadmin/edit-employee/edit-employee.component';
+import {AttendanceComponent} from './superadmin/attendance/attendance.component';
+import {RoleManagementComponent} from './superadmin/role-management/role-management.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
 
   //super admin routing
-
   { path: 'superadmin',
     component: SuperadminComponent,
   children: [
@@ -23,6 +24,8 @@ const routes: Routes = [
     { path: 'manage-employee', component: ManageEmployeeComponent },
     { path: 'add-employee', component: AddEmployeeComponent},
     { path: 'edit-employee/:id', component: EditEmployeeComponent },
+    { path: 'attendance', component: AttendanceComponent },
+    { path: 'role-management', component: RoleManagementComponent },
   ]},
 
 

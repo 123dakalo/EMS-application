@@ -18,22 +18,22 @@ export class DashboardComponent {
       title: 'Attendance',
       text: 'Track clock-in/out, lateness, and early leaves.',
       icon: 'fas fa-calendar-check',
-      link: '/attendance'
+      link: '/superadmin/attendance'
     },
     {
       title: 'Role Management',
       text: 'Assign roles to employees: Admin, SuperAdmin.',
       icon: 'fas fa-user-shield',
-      link: '/roles'
+      link: '/superadmin/role-management'
     },
     {
-      title: 'Analytics',
+      title: 'Analytics:(coming soon)',
       text: 'Visualize attendance trends and performance.',
       icon: 'fas fa-chart-line',
       link: '/analytics'
     },
     {
-      title: 'Settings',
+      title: 'Settings:(coming soon)',
       text: 'Configure system preferences and schedules.',
       icon: 'fas fa-cogs',
       link: '/settings'
