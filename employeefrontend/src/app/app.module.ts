@@ -12,6 +12,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { ManageEmployeeComponent } from './superadmin/manage-employee/manage-employee.component';
 import { DashboardComponent } from './superadmin/dashboard/dashboard.component';
 import { AddEmployeeComponent } from './superadmin/add-employee/add-employee.component';
+import { EditEmployeeComponent } from './superadmin/edit-employee/edit-employee.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AddEmployeeComponent } from './superadmin/add-employee/add-employee.com
     ManageEmployeeComponent,
     DashboardComponent,
     AddEmployeeComponent,
+    EditEmployeeComponent,
   ],
   imports: [
     BrowserModule,

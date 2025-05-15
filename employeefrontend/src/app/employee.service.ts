@@ -16,6 +16,10 @@ export class EmployeeService {
     return this.http.get<Employee[]>(this.baseUrl);
   }
 
+  getEmployeeById(id: number): Observable<Employee> {
+    return this.http.get<Employee>(`${this.baseUrl}/${id}`);
+  }
+
   createEmployee(employee: Employee): Observable<Employee> {
     return this.http.post<Employee>(this.baseUrl, employee);
   }
