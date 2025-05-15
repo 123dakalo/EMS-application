@@ -21,12 +21,6 @@ export class DashboardComponent {
       link: '/superadmin/attendance'
     },
     {
-      title: 'Role Management',
-      text: 'Assign roles to employees: Admin, SuperAdmin.',
-      icon: 'fas fa-user-shield',
-      link: '/superadmin/role-management'
-    },
-    {
       title: 'Analytics:(coming soon)',
       text: 'Visualize attendance trends and performance.',
       icon: 'fas fa-chart-line',

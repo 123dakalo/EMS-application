@@ -3,5 +3,7 @@ export interface Employee {
   fullName: string;
   emailId: string;
   password?: string;
-  role: 'employee' | 'admin' | 'superadmin';
+  role: string;
+
+  updatedRole?: string;
 }
