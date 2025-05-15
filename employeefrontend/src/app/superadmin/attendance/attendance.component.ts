@@ -16,10 +16,6 @@ export class AttendanceComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
-    this.fetchAttendance();
-  }
-
   filteredAttendance() {
     return this.attendanceRecords.filter(record => {
       const nameMatch = record.employee.fullName.toLowerCase().includes(this.searchName.toLowerCase());
@@ -31,6 +27,10 @@ export class AttendanceComponent implements OnInit {
   fetchAttendance() {
     this.http.get<Attendance[]>('http://localhost:8080/api/attendance')
       .subscribe(data => this.attendanceRecords = data);
+  }
+
+  ngOnInit(): void {
+    this.fetchAttendance();
   }
 
 }

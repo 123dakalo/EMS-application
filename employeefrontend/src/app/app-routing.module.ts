@@ -9,7 +9,6 @@ import {DashboardComponent} from './superadmin/dashboard/dashboard.component';
 import {AddEmployeeComponent} from './superadmin/add-employee/add-employee.component';
 import {EditEmployeeComponent} from './superadmin/edit-employee/edit-employee.component';
 import {AttendanceComponent} from './superadmin/attendance/attendance.component';
-import {RoleManagementComponent} from './superadmin/role-management/role-management.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -25,7 +24,6 @@ const routes: Routes = [
     { path: 'add-employee', component: AddEmployeeComponent},
     { path: 'edit-employee/:id', component: EditEmployeeComponent },
     { path: 'attendance', component: AttendanceComponent },
-    { path: 'role-management', component: RoleManagementComponent },
   ]},
 
 

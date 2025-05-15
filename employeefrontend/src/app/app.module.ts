@@ -14,7 +14,6 @@ import { DashboardComponent } from './superadmin/dashboard/dashboard.component';
 import { AddEmployeeComponent } from './superadmin/add-employee/add-employee.component';
 import { EditEmployeeComponent } from './superadmin/edit-employee/edit-employee.component';
 import { AttendanceComponent } from './superadmin/attendance/attendance.component';
-import { RoleManagementComponent } from './superadmin/role-management/role-management.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import { RoleManagementComponent } from './superadmin/role-management/role-manag
     AddEmployeeComponent,
     EditEmployeeComponent,
     AttendanceComponent,
-    RoleManagementComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +34,7 @@ import { RoleManagementComponent } from './superadmin/role-management/role-manag
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
