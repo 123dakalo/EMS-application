@@ -26,6 +26,7 @@ export class EditEmployeeComponent implements  OnInit {
     this.employeeForm = this.fb.group({
       fullName: ['', Validators.required],
       emailId: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
       role: ['', Validators.required]
     });
 
