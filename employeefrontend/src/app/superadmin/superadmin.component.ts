@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-superadmin',
@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './superadmin.component.html',
   styleUrl: './superadmin.component.css'
 })
-export class SuperadminComponent {
-  fullName: string='Tshivhase Dakalo';
+export class SuperadminComponent implements OnInit{
+  fullName: string='';
 
+ngOnInit() {
+  const user = JSON.parse(localStorage.getItem('loggedInUser') || '{}');
+  this.fullName = user.fullName || '';
+}
 
   logout() {
     // Clear auth, redirect, etc.

@@ -22,7 +22,6 @@ export class AddEmployeeComponent {
   }
 
   onSubmit() {
-    this.employeeForm.reset()
     if (this.employeeForm.valid) {
       this.employeeService.createEmployee(this.employeeForm.value).subscribe({
         next: (res) => {

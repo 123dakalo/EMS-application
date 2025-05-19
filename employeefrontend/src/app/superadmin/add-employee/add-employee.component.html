@@ -2,7 +2,7 @@
 <div class="custom-form-container mt-4">
   <h2 class="mb-4 text-primary">Create New Employee</h2>
 
-  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="bg-dark p-4 rounded text-light">
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" autocomplete="off" class="bg-dark p-4 rounded text-light">
     <div class="mb-3">
       <label for="fullName" class="form-label">Full Name</label>
       <input type="text" class="form-control" id="fullName" formControlName="fullName" required />
@@ -10,12 +10,12 @@
 
     <div class="mb-3">
       <label for="emailId" class="form-label">Email</label>
-      <input type="email" class="form-control" id="emailId" formControlName="emailId" required />
+      <input type="email" class="form-control" id="emailId" formControlName="emailId" autocomplete="off" required />
     </div>
 
     <div class="mb-3">
       <label for="password" class="form-label">Password</label>
-      <input type="password" class="form-control" id="password" formControlName="password" required />
+      <input type="password" class="form-control" id="password" formControlName="password" autocomplete="off" required />
     </div>
 
     <div class="mb-3">
