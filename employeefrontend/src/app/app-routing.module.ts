@@ -9,6 +9,7 @@ import {DashboardComponent} from './superadmin/dashboard/dashboard.component';
 import {AddEmployeeComponent} from './superadmin/add-employee/add-employee.component';
 import {EditEmployeeComponent} from './superadmin/edit-employee/edit-employee.component';
 import {AttendanceComponent} from './superadmin/attendance/attendance.component';
+import {AdminDashboardComponent} from './admin/admin-dashboard/admin-dashboard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -26,8 +27,13 @@ const routes: Routes = [
     { path: 'attendance', component: AttendanceComponent },
   ]},
 
-
-  { path: 'admin',  component: AdminComponent },
+  //admin routing
+  { path: 'admin',
+    component: AdminComponent,
+  children: [
+    { path: '', redirectTo: 'admin-dashboard', pathMatch: 'full' },
+    { path: 'admin-dashboard', component: AdminDashboardComponent },
+  ]},
   { path: 'employee',  component: EmployeeComponent },
 
 
