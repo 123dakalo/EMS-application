@@ -1,1 +1,14 @@
-<router-outlet></router-outlet>
+<!-- Admin Navbar -->
+<nav class="navbar navbar-dark bg-dark px-4 shadow-sm fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white fw-bold" routerLink="/admin/admin-dashboard">Admin Dashboard</a>
+    <div class="d-flex align-items-center ms-auto">
+      <span class="fullname me-3">👋 Hi, {{ fullName }}</span>
+      <button class="btn btn-outline-light btn-sm" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</nav>
+
+<section class="dashboard_section py-5">
+  <router-outlet></router-outlet>
+</section>
