@@ -15,7 +15,7 @@ import { AddEmployeeComponent } from './superadmin/add-employee/add-employee.com
 import { EditEmployeeComponent } from './superadmin/edit-employee/edit-employee.component';
 import { AttendanceComponent } from './superadmin/attendance/attendance.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
-import { EmployeeClockinClockoutComponent } from './employee/employee-clockin-clockout/employee-clockin-clockout.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +30,6 @@ import { EmployeeClockinClockoutComponent } from './employee/employee-clockin-cl
     EditEmployeeComponent,
     AttendanceComponent,
     AdminDashboardComponent,
-    EmployeeClockinClockoutComponent,
   ],
   imports: [
     BrowserModule,
