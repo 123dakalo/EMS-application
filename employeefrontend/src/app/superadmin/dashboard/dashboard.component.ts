@@ -15,6 +15,12 @@ export class DashboardComponent {
       link: '/superadmin/manage-employee',
     },
     {
+      title: 'Clock-in/out',
+      text: 'Track clock-in/out, lateness, and early leaves.',
+      icon: 'fas fa-clock',
+      link: '/superadmin/superadmin-clockin'
+    },
+    {
       title: 'Attendance',
       text: 'Track clock-in/out, lateness, and early leaves.',
       icon: 'fas fa-calendar-check',

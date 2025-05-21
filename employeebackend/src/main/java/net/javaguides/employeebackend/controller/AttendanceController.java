@@ -5,7 +5,9 @@ import net.javaguides.employeebackend.model.EmployeeModel;
 import net.javaguides.employeebackend.repository.AttendanceRepository;
 import net.javaguides.employeebackend.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -62,6 +64,7 @@ public class AttendanceController {
     @GetMapping("/employee/{employeeId}")
     public List<AttendanceModel> getAttendanceForEmployee(@PathVariable Long employeeId) {
         EmployeeModel employee = employeeRepo.findById(employeeId).orElseThrow();
+
         return attendanceRepo.findByEmployee(employee);
     }
 

@@ -10,6 +10,10 @@ import {AddEmployeeComponent} from './superadmin/add-employee/add-employee.compo
 import {EditEmployeeComponent} from './superadmin/edit-employee/edit-employee.component';
 import {AttendanceComponent} from './superadmin/attendance/attendance.component';
 import {AdminDashboardComponent} from './admin/admin-dashboard/admin-dashboard.component';
+import {AdminManageComponent} from './admin/admin-manage/admin-manage.component';
+import {AdminAttendanceComponent} from './admin/admin-attendance/admin-attendance.component';
+import {SuperadminClockinComponent} from './superadmin/superadmin-clockin/superadmin-clockin.component';
+import {AdminClockinComponent} from './admin/admin-clockin/admin-clockin.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -25,6 +29,7 @@ const routes: Routes = [
     { path: 'add-employee', component: AddEmployeeComponent},
     { path: 'edit-employee/:id', component: EditEmployeeComponent },
     { path: 'attendance', component: AttendanceComponent },
+    { path: 'superadmin-clockin', component: SuperadminClockinComponent },
   ]},
 
   //admin routing
@@ -33,7 +38,12 @@ const routes: Routes = [
   children: [
     { path: '', redirectTo: 'admin-dashboard', pathMatch: 'full' },
     { path: 'admin-dashboard', component: AdminDashboardComponent },
+    { path: 'admin-manage', component: AdminManageComponent },
+    { path: 'admin-attendance', component: AdminAttendanceComponent },
+    { path: 'admin-clockin', component: AdminClockinComponent },
   ]},
+
+  //employee routing
   { path: 'employee',  component: EmployeeComponent },
 
 

@@ -1,7 +1,40 @@
-.card {
-  transition: transform 0.3s ease;
+.dashboard_card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  text-align: left;
+  border-left: 4px solid #0ea5e9;
 }
 
-.card:hover {
+.dashboard_card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
+
+.icon_box {
+  font-size: 2rem;
+  color: #0ea5e9;
+}
+
+.dashboard_card h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.dashboard_card p {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.btn-primary {
+  background-color: #0ea5e9;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn-primary:hover {
+  background-color: #0284c7;
+}
+

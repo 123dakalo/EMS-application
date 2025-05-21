@@ -15,6 +15,10 @@ import { AddEmployeeComponent } from './superadmin/add-employee/add-employee.com
 import { EditEmployeeComponent } from './superadmin/edit-employee/edit-employee.component';
 import { AttendanceComponent } from './superadmin/attendance/attendance.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { AdminManageComponent } from './admin/admin-manage/admin-manage.component';
+import { AdminAttendanceComponent } from './admin/admin-attendance/admin-attendance.component';
+import { SuperadminClockinComponent } from './superadmin/superadmin-clockin/superadmin-clockin.component';
+import { AdminClockinComponent } from './admin/admin-clockin/admin-clockin.component';
 
 
 @NgModule({
@@ -30,6 +34,10 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard
     EditEmployeeComponent,
     AttendanceComponent,
     AdminDashboardComponent,
+    AdminManageComponent,
+    AdminAttendanceComponent,
+    SuperadminClockinComponent,
+    AdminClockinComponent,
   ],
   imports: [
     BrowserModule,
