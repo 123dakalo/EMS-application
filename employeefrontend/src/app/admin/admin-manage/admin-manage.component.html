@@ -1,1 +1,52 @@
-<p>admin-manage works!</p>
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3 class="text-primary">Manage Employees</h3>
+    <button class="btn btn-success" routerLink="/admin/admin-add">+ Add Employee</button>
+  </div>
+
+  <div class="table-responsive shadow-sm rounded bg-white">
+    <table class="table table-hover table-borderless mb-0 align-middle">
+      <thead class="table-dark text-center">
+      <tr>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let emp of employees" class="text-center">
+        <td class="fw-semibold">EMS{{ emp.id }}</td>
+        <td>{{ emp.fullName }}</td>
+        <td>{{ emp.emailId }}</td>
+        <td>{{ emp.password }}</td>
+        <td>
+            <span
+              class="badge rounded-pill"
+              [ngClass]="{
+                'bg-primary': emp.role === 'employee',
+                'bg-warning text-dark': emp.role === 'admin',
+                'bg-danger': emp.role === 'superadmin'
+              }">
+              {{ emp.role | titlecase }}
+            </span>
+        </td>
+        <td>
+          <button
+            class="btn btn-outline-primary btn-sm me-2 shadow-sm"
+            (click)="editEmployee(emp)">
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button
+            class="btn btn-outline-danger btn-sm shadow-sm"
+            (click)="deleteEmployee(emp.id)">
+            <i class="bi bi-trash"></i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -2,28 +2,28 @@
   <h2 class="mb-4 text-primary">Attendance Records</h2>
 
   <!-- Filters -->
-  <div class="row mb-3">
-    <div class="col-md-4 mb-2">
+  <div class="row mb-3 g-2">
+    <div class="col-md-4">
       <input
         type="text"
-        class="form-control"
+        class="form-control shadow-sm"
         placeholder="Search by Employee Name"
         [(ngModel)]="searchName"
       />
     </div>
-    <div class="col-md-4 mb-2">
+    <div class="col-md-4">
       <input
         type="date"
-        class="form-control"
+        class="form-control shadow-sm"
         [(ngModel)]="searchDate"
       />
     </div>
   </div>
 
   <!-- Attendance Table -->
-  <div class="table-responsive">
-    <table class="table table-striped table-bordered table-hover text-light bg-dark">
-      <thead class="table-primary">
+  <div class="table-responsive shadow-sm rounded bg-white">
+    <table class="table table-hover table-borderless align-middle mb-0">
+      <thead class="table-dark text-center">
       <tr>
         <th>Employee</th>
         <th>Role</th>
@@ -35,14 +35,36 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let record of filteredAttendance()">
-        <td>{{ record.employee.fullName }}</td>
-        <td>{{ record.employee.role }}</td>
+      <tr *ngFor="let record of filteredAttendance()" class="text-center">
+        <td class="fw-semibold">{{ record.employee.fullName }}</td>
+        <td>
+            <span
+              class="badge rounded-pill"
+              [ngClass]="{
+                'bg-primary': record.employee.role === 'employee',
+                'bg-warning text-dark': record.employee.role === 'admin',
+                'bg-danger': record.employee.role === 'superadmin'
+              }">
+              {{ record.employee.role | titlecase }}
+            </span>
+        </td>
         <td>{{ record.date }}</td>
         <td>{{ record.clockInTime || '-' }}</td>
         <td>{{ record.clockOutTime || '-' }}</td>
-        <td>{{ record.late ? 'Yes' : 'No' }}</td>
-        <td>{{ record.earlyLeave ? 'Yes' : 'No' }}</td>
+        <td>
+            <span
+              class="badge"
+              [ngClass]="record.late ? 'bg-danger' : 'bg-success'">
+              {{ record.late ? 'Yes' : 'No' }}
+            </span>
+        </td>
+        <td>
+            <span
+              class="badge"
+              [ngClass]="record.earlyLeave ? 'bg-danger' : 'bg-success'">
+              {{ record.earlyLeave ? 'Yes' : 'No' }}
+            </span>
+        </td>
       </tr>
       </tbody>
     </table>

@@ -1,6 +1,6 @@
 <!-- create-employee.component.html -->
 <div class="custom-form-container mt-4" style="max-width: 500px; margin: auto;">
-  <h2 class="mb-3 text-primary text-center">Create Employee</h2>
+  <h2 class="mb-3 text-primary text-center">Update Employee</h2>
 
   <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="bg-dark p-3 rounded text-light" autocomplete="off">
     <div class="mb-2">
@@ -24,10 +24,9 @@
         <option value="">Select Role</option>
         <option value="employee">Employee</option>
         <option value="admin">Admin</option>
-        <option value="superadmin">Superadmin</option>
       </select>
     </div>
 
-    <button type="submit" class="btn btn-primary w-100 mt-2" [disabled]="employeeForm.invalid">Create</button>
+    <button type="submit" class="btn btn-primary w-100 mt-2" [disabled]="employeeForm.invalid">Update</button>
   </form>
 </div>

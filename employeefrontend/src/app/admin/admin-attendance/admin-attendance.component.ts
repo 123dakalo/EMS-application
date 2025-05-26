@@ -16,6 +16,10 @@ export class AdminAttendanceComponent implements OnInit{
 
   constructor(private http: HttpClient) {}
 
+  ngOnInit(): void {
+    this.fetchAttendance();
+  }
+
   filteredAttendance() {
     return this.attendanceRecords.filter(record => {
       const nameMatch = record.employee.fullName.toLowerCase().includes(this.searchName.toLowerCase());
@@ -26,12 +30,9 @@ export class AdminAttendanceComponent implements OnInit{
 
   fetchAttendance() {
     this.http.get<Attendance[]>('http://localhost:8080/api/attendance')
-      .subscribe(data => this.attendanceRecords = data);
+      .subscribe(data => this.attendanceRecords = data.filter(emp =>
+        emp.employee.role.toLowerCase() === 'admin' || emp.employee.role.toLowerCase() === 'employee'
+      ));
   }
-
-  ngOnInit(): void {
-    this.fetchAttendance();
-  }
-
 
 }

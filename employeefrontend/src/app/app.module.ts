@@ -19,6 +19,8 @@ import { AdminManageComponent } from './admin/admin-manage/admin-manage.componen
 import { AdminAttendanceComponent } from './admin/admin-attendance/admin-attendance.component';
 import { SuperadminClockinComponent } from './superadmin/superadmin-clockin/superadmin-clockin.component';
 import { AdminClockinComponent } from './admin/admin-clockin/admin-clockin.component';
+import { AdminAddComponent } from './admin/admin-add/admin-add.component';
+import { AdminEditComponent } from './admin/admin-edit/admin-edit.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { AdminClockinComponent } from './admin/admin-clockin/admin-clockin.compo
     AdminAttendanceComponent,
     SuperadminClockinComponent,
     AdminClockinComponent,
+    AdminAddComponent,
+    AdminEditComponent,
   ],
   imports: [
     BrowserModule,

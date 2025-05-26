@@ -14,6 +14,8 @@ import {AdminManageComponent} from './admin/admin-manage/admin-manage.component'
 import {AdminAttendanceComponent} from './admin/admin-attendance/admin-attendance.component';
 import {SuperadminClockinComponent} from './superadmin/superadmin-clockin/superadmin-clockin.component';
 import {AdminClockinComponent} from './admin/admin-clockin/admin-clockin.component';
+import {AdminEditComponent} from './admin/admin-edit/admin-edit.component';
+import {AdminAddComponent} from './admin/admin-add/admin-add.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -41,6 +43,8 @@ const routes: Routes = [
     { path: 'admin-manage', component: AdminManageComponent },
     { path: 'admin-attendance', component: AdminAttendanceComponent },
     { path: 'admin-clockin', component: AdminClockinComponent },
+    { path: 'admin-edit/:id', component: AdminEditComponent },
+    { path: 'admin-add', component: AdminAddComponent },
   ]},
 
   //employee routing
